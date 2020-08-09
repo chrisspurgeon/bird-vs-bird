@@ -31,6 +31,10 @@ select {
 .formwrapper {
     text-align: center;
 }
+.testphoto {
+    border: 5px solid red;
+    width: 640px;
+}
 .hide {
     display: none;
 }
