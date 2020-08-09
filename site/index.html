@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            body {
+                background-color: darkslategray;
+            }
+            h1, h2 {
+                font-family: 'Neuton', serif;
+                text-align: center;
+                color: white;
+            }
+            h1{ 
+                font-size: 600%;
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+            h2{ 
+                font-size: 300%;
+                width: 70%;
+                margin: auto;
+            }
+            select {
+                font-size: 120%;
+                padding: 3px 20px;
+                border-radius: 10px;
+                width: 275px;
+                margin: 20px;
+            }
+            .formwrapper {
+                text-align: center;
+            }
+            .hide {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bird vs. Bird</h1>
+        <h2>A site to aid in learning to tell one bird from another.</h2>
+        <div class="formwrapper">
+            <form>
+                <select id="bird1" class="bird1">
+                    <option value="">Pick a bird...</option>
+                    <option value="BOGU">Bonaparte's Gull</option>
+                    <option value="FRGU">Franklin's Gull</option>
+                    <option value="LAGU">Laughing Gull</option>
+                </select>
+                <select id="bird2" class="bird2 hide">
+                    <option value="">Pick a related bird...</option>
+                    <option value="BOGU">Bonaparte's Gull</option>
+                    <option value="FRGU">Franklin's Gull</option>
+                    <option value="LAGU">Laughing Gull</option>
+                </select>
+            </form>
+        </div>
+        <script type="text/javascript" src="scripts/bvb.js"></script>
+    </body>
+</html>
