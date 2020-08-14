@@ -11,19 +11,30 @@
             <form>
                 <select id="bird1" class="bird1">
                     <option value="">Pick a bird...</option>
-                    <option value="BOGU">Bonaparte's Gull</option>
-                    <option value="FRGU">Franklin's Gull</option>
-                    <option value="LAGU">Laughing Gull</option>
+                    <option value="BOGU" data-category="GULL">Bonaparte's Gull</option>
+                    <option value="FRGU" data-category="GULL">Franklin's Gull</option>
+                    <option value="LAGU" data-category="GULL">Laughing Gull</option>
+                    <option value="LOSH" data-category="SHRIKE">Loggerhead Shrike</option>
+                    <option value="NSHR" data-category="SHRIKE">Northern Shrike</option>
                 </select>
                 <select id="bird2" class="bird2 hide">
                     <option value="">Pick a related bird...</option>
-                    <option value="BOGU">Bonaparte's Gull</option>
-                    <option value="FRGU">Franklin's Gull</option>
-                    <option value="LAGU">Laughing Gull</option>
+                    <option value="BOGU" data-category="GULL">Bonaparte's Gull</option>
+                    <option value="FRGU" data-category="GULL">Franklin's Gull</option>
+                    <option value="LAGU" data-category="GULL">Laughing Gull</option>
+                    <option value="LOSH" data-category="SHRIKE">Loggerhead Shrike</option>
+                    <option value="NSHR" data-category="SHRIKE">Northern Shrike</option>
                 </select>
             </form>
         </div>
-        <img class="testphoto" src="">
+        <div class="intro">
+            <h3><span class="startover js-startover hide">start over</span></h3>
+            <h2 class="battleTitle hide"></h2>
+            <div class="intro-images hide">
+                <img src="" class="intro-image intro-image-left" /><img src="" class="intro-image intro-image-right" />
+            </div>
+        </div>
+<!--        <img class="testphoto" src="">   -->
         <script type="text/javascript" src="scripts/bvb.js"></script>
     </body>
 </html>
