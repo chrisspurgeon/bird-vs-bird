@@ -1,0 +1,29 @@
+{
+    "distribution": {
+        "text":"",
+        "images":[]
+    },
+    "vocalizations": {
+        "text":"",
+        "images": []
+    },
+    "quiz": {
+        "photos" : [
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/239989621/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/224593571/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/224592741/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/174594031/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/174345191/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/172129331/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/166712241/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/161124631/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/155630061/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/153954541/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/152371991/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/147029181/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/147029151/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/253355301/640",
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/247819231/640"
+        ]
+    }
+}

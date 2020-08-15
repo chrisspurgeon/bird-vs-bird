@@ -1,0 +1,20 @@
+[
+    {"key": "head", "title": "Head"},
+    {"key": "bill", "title": "Bill"},
+    {"key": "crown", "title": "Crown"},
+    {"key": "lores", "title": "Lores"},
+    {"key": "supercillium", "title": "Supercillium"},
+    {"key": "breast", "title": "Breast"},
+    {"key": "flanks", "title": "Flanks"},
+    {"key": "belly", "title": "Belly"},
+    {"key": "vent", "title": "Vent"},
+    {"key": "legs", "title": "Legs"},
+    {"key": "feet", "title": "Feet"},
+    {"key": "wings", "title": "Wings"},
+    {"key": "primaries", "title": "Primaries"},
+    {"key": "secondaries", "title": "Secondaries"},
+    {"key": "tail", "title": "Tail"},
+    {"key": "distribution", "title": "Distribution"},
+    {"key": "vocalizations", "title": "Vocalizations"},
+    {"key": "behavior", "title": "Behavior"}
+]

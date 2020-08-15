@@ -7,6 +7,24 @@ var bird2Name = '';
 var $battleTitle = $('.battleTitle');
 var $leftIntroImage = $('.intro-image-left');
 var $rightIntroImage = $('.intro-image-right');
+var differences;
+
+
+// Get the list of possible differences.
+$.get("data/differences.json")
+    .done(function (data) {
+        console.log('got difference data!');
+        differences = data;
+        for (var i = 0; i < differences.length; i++) {
+            console.log(differences[i].key + " = " + differences[i].title);
+        }
+    })
+    .fail(function(data, status, err) {
+        console.log("ERROR! Difference list not found.");
+    });
+
+
+
 
 $("#bird1").on("change", function() {
     bird1Value = $("#bird1").val();
