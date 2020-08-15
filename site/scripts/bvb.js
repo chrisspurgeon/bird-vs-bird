@@ -77,8 +77,8 @@ function resetAll() {
 function displayIntro() {
     $battleTitle.html(bird1Name + ' vs. ' + bird2Name);
     $battleTitle.removeClass('hide');
-    $leftIntroImage.attr('src', 'images/' + bird1Value + '-left.jpg');
-    $rightIntroImage.attr('src', 'images/' + bird2Value + '-right.jpg');
+    $leftIntroImage.attr('src', 'images/birds/' + bird1Value + '/' + bird1Value + '-left.jpg');
+    $rightIntroImage.attr('src', 'images/birds/' + bird2Value + '/' + bird2Value + '-right.jpg');
     $('.intro-images').removeClass('hide');
 }
 

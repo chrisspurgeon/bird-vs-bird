@@ -1,6 +1,9 @@
 {
+    "bill": {
+        "text":"Bill text for Franklin's Gull."
+    },
     "distribution": {
-        "text":"",
+        "text":"Franklin's Gull distribution text.",
         "images":[]
     },
     "vocalizations": {
