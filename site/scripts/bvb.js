@@ -11,7 +11,8 @@ var differences;
 
 
 // Get the list of possible differences.
-$.get("data/differences.json")
+function loadDifferences() {
+    $.get("data/differencesList.json")
     .done(function (data) {
         console.log('got difference data!');
         differences = data;
@@ -22,7 +23,7 @@ $.get("data/differences.json")
     .fail(function(data, status, err) {
         console.log("ERROR! Difference list not found.");
     });
-
+}
 
 
 
@@ -49,12 +50,20 @@ $("#bird1").on("change", function() {
 
 $("#bird2").on("change", function() {
     console.log("change 2 triggered");
-    bird2Value = $("#bird2").val();
-    bird2Category = $("#bird2 option:selected").data('category');
-    bird2Name = $("#bird2 option:selected").text();
+    // bird2Value = $("#bird2").val();
+    // bird2Category = $("#bird2 option:selected").data('category');
+    // bird2Name = $("#bird2 option:selected").text();
     $("#bird2").addClass("hide");
     displayIntro();
+    loadDifferenceData();
 });
+
+function loadDifferenceData() {
+    $('.differences').addClass('loading').removeClass('hide');
+    loadDifferences();
+//    loadLeft();
+//    loadRight();
+}
 
 $('.js-startover').on('click', resetAll);
 
@@ -68,6 +77,7 @@ function resetAll() {
     $('.js-startover').addClass('hide');
     $('.intro-images').addClass('hide');
     $battleTitle.addClass('hide');
+    $('.differences').addClass('hide').removeClass('loading');
     bird1Category = '';
     bird1Value = '';
     bird2Category = '';
@@ -82,13 +92,13 @@ function displayIntro() {
     $('.intro-images').removeClass('hide');
 }
 
-$.get("scripts/FRGU.json", function(data) {
+$.get("data/species/FRGU.json", function(data) {
     window.FRGU = data;
     window.FRGU.photoCount = data.photos.length;
     window.FRGU.next = 0;
     console.log('got json');
 });
-$.get("scripts/LAGU.json", function(data) {
+$.get("data/species/LAGU.json", function(data) {
     window.LAGU = data;
     window.LAGU.photoCount = data.photos.length;
     window.LAGU.next = 0;

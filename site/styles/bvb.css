@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     border: 0;
+    color: white;
 }
 body {
     background-color: darkslategray;
@@ -66,6 +67,30 @@ select {
     height: 400px;
     padding: 20px;
 }
+.differences {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 200px;
+    text-align: center;
+}
+.loading {
+    background-image: url('/images/icons/loading.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.loading-message {
+    display: none;
+}
+.loading .loading-message {
+    display: inline;
+    position: absolute;
+    width: 200px;
+    left: calc(50% - 100px);
+    top: 70px;
+}
+
 .hide {
     display: none;
 }
