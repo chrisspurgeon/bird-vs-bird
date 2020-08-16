@@ -50,13 +50,35 @@ $("#bird1").on("change", function() {
 
 $("#bird2").on("change", function() {
     console.log("change 2 triggered");
-    // bird2Value = $("#bird2").val();
-    // bird2Category = $("#bird2 option:selected").data('category');
-    // bird2Name = $("#bird2 option:selected").text();
+    bird2Value = $("#bird2").val();
+    bird2Category = $("#bird2 option:selected").data('category');
+    bird2Name = $("#bird2 option:selected").text();
     $("#bird2").addClass("hide");
     displayIntro();
-    loadDifferenceData();
+    $('.differences').addClass('loading').removeClass('hide');
+    $.when(getData('/data/differencesList.json'), getData('data/species/' + bird1Value + '.json'), getData('data/species/' + bird2Value + '.json'))
+    .done(function(differenceData, leftBirdData, rightBirdData) {
+        console.log('got ALL the data!');
+        console.log('Difference data is...');
+        console.log(JSON.stringify(differenceData));
+        console.log('leftBird data is...');
+        console.log(JSON.stringify(leftBirdData));
+        console.log('RightBird data is...');
+        console.log(JSON.stringify(rightBirdData));
+    })
+    .fail(function(err) {
+        console.log("Couldn't get all the data!");
+    });
 });
+
+function getData(dataPath) {
+    console.log('Reached getData() with a path of ' + dataPath);
+    return $.get(dataPath, function(data) {
+        console.log('got some data! Here it is...');
+        console.log(JSON.stringify(data));
+        // return data;
+    });
+}
 
 function loadDifferenceData() {
     $('.differences').addClass('loading').removeClass('hide');
@@ -92,18 +114,18 @@ function displayIntro() {
     $('.intro-images').removeClass('hide');
 }
 
-$.get("data/species/FRGU.json", function(data) {
-    window.FRGU = data;
-    window.FRGU.photoCount = data.photos.length;
-    window.FRGU.next = 0;
-    console.log('got json');
-});
-$.get("data/species/LAGU.json", function(data) {
-    window.LAGU = data;
-    window.LAGU.photoCount = data.photos.length;
-    window.LAGU.next = 0;
-    console.log('got json');
-});
+// $.get("data/species/FRGU.json", function(data) {
+//     window.FRGU = data;
+//     window.FRGU.photoCount = data.photos.length;
+//     window.FRGU.next = 0;
+//     console.log('got json');
+// });
+// $.get("data/species/LAGU.json", function(data) {
+//     window.LAGU = data;
+//     window.LAGU.photoCount = data.photos.length;
+//     window.LAGU.next = 0;
+//     console.log('got json');
+// });
 $(".testphoto").click(function() {
     var which;
     if (Math.random() < 0.5) {
