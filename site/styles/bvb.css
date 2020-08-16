@@ -83,7 +83,7 @@ select {
 .loading-message {
     display: none;
 }
-.loading .loading-message {
+.loading .loading-message, .loading .error-message {
     display: inline;
     position: absolute;
     width: 200px;

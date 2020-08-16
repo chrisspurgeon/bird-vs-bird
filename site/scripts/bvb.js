@@ -7,6 +7,13 @@ var bird2Name = '';
 var $battleTitle = $('.battleTitle');
 var $leftIntroImage = $('.intro-image-left');
 var $rightIntroImage = $('.intro-image-right');
+var $differencesDiv = $('.differences');
+var $loadingMessageDiv = $('.loading-message');
+var loadingMessage = 'Loading data...';
+var errorMessage = 'Something went wrong! Please start over. :-(';
+var differenceData;
+var bird1Data;
+var bird2Data;
 
 
 // Fired when the user picks the first bird.
@@ -42,21 +49,29 @@ $("#bird2").on("change", function() {
     // Loads the bird1 vs. bird2 top images and text.
     displayIntro();
     // Display the data loading presentation
-    $('.differences').addClass('loading').removeClass('hide');
+    $differencesDiv.addClass('loading').removeClass('hide');
+    $loadingMessageDiv.html(loadingMessage).removeClass('error-message').addClass('loading-message');
     // Retrieve the differences list, and the data for the two birds.
     $.when(getData('/data/differencesList.json'), getData('data/species/' + bird1Value + '.json'), getData('data/species/' + bird2Value + '.json'))
-    .done(function(differenceData, leftBirdData, rightBirdData) {
+    .done(function(differenceDataResult, leftBirdDataResult, rightBirdDataResult) {
         console.log('got ALL the data!');
         console.log('Difference data is...');
-        console.log(JSON.stringify(differenceData));
+        console.log(JSON.stringify(differenceDataResult));
         console.log('leftBird data is...');
-        console.log(JSON.stringify(leftBirdData));
+        console.log(JSON.stringify(leftBirdDataResult));
         console.log('RightBird data is...');
-        console.log(JSON.stringify(rightBirdData));
+        console.log(JSON.stringify(rightBirdDataResult));
+        differenceData = differenceDataResult[0];
+        bird1Data = leftBirdDataResult[0];
+        bird2Data = rightBirdDataResult[0];
+        displayResults();
+
     })
     .fail(function(err) {
         console.log("Couldn't get all the data!");
-        // TODO: Error handling.
+        // Error handling.
+        $loadingMessageDiv.html(errorMessage).addClass('error-message').removeClass('loading-message');
+        $differencesDiv.removeClass('loading');
     });
 });
 
@@ -98,6 +113,24 @@ function displayIntro() {
     $rightIntroImage.attr('src', 'images/birds/' + bird2Value + '/' + bird2Value + '-right.jpg');
     $('.intro-images').removeClass('hide');
 }
+
+// Load all of the difference data onto the page.
+function displayResults() {
+    for (var i = 0; i < differenceData.length; i++) {
+        console.log("Checking " + differenceData[i].key);
+        if (typeof bird1Data[differenceData[i].key] === 'undefined') {
+            console.log('\tBird one has nothing for ' + differenceData[i].key);
+        } else {
+            console.log('\tBird one has info for ' + differenceData[i].key + '. Here is the text...');
+            console.log('\t' + bird1Data[differenceData[i].key]['text']);
+        }
+    }
+}
+
+
+
+
+
 
 // $(".testphoto").click(function() {
 //     var which;
