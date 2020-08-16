@@ -7,26 +7,9 @@ var bird2Name = '';
 var $battleTitle = $('.battleTitle');
 var $leftIntroImage = $('.intro-image-left');
 var $rightIntroImage = $('.intro-image-right');
-var differences;
 
 
-// Get the list of possible differences.
-function loadDifferences() {
-    $.get("data/differencesList.json")
-    .done(function (data) {
-        console.log('got difference data!');
-        differences = data;
-        for (var i = 0; i < differences.length; i++) {
-            console.log(differences[i].key + " = " + differences[i].title);
-        }
-    })
-    .fail(function(data, status, err) {
-        console.log("ERROR! Difference list not found.");
-    });
-}
-
-
-
+// Fired when the user picks the first bird.
 $("#bird1").on("change", function() {
     bird1Value = $("#bird1").val();
     bird1Category = $("#bird1 option:selected").data('category');
@@ -35,6 +18,7 @@ $("#bird1").on("change", function() {
     $("#bird1").addClass("hide");
     $('.js-startover').removeClass('hide');
 
+    // Now that we've picked the first bird, make the second bird select element contain only related birds.
     var bird2Options = $("#bird2 option");
     $(bird2Options).removeClass('hide');
     for (var i = 0; i < bird2Options.length; i++) {
@@ -45,17 +29,21 @@ $("#bird1").on("change", function() {
     $("#bird2").val('');
     $("#bird2").focus();
     $("#bird2").removeClass("hide");
-    console.log()
 });
 
+
+// Fired when the user picks the second bird.
 $("#bird2").on("change", function() {
     console.log("change 2 triggered");
     bird2Value = $("#bird2").val();
     bird2Category = $("#bird2 option:selected").data('category');
     bird2Name = $("#bird2 option:selected").text();
     $("#bird2").addClass("hide");
+    // Loads the bird1 vs. bird2 top images and text.
     displayIntro();
+    // Display the data loading presentation
     $('.differences').addClass('loading').removeClass('hide');
+    // Retrieve the differences list, and the data for the two birds.
     $.when(getData('/data/differencesList.json'), getData('data/species/' + bird1Value + '.json'), getData('data/species/' + bird2Value + '.json'))
     .done(function(differenceData, leftBirdData, rightBirdData) {
         console.log('got ALL the data!');
@@ -68,25 +56,21 @@ $("#bird2").on("change", function() {
     })
     .fail(function(err) {
         console.log("Couldn't get all the data!");
+        // TODO: Error handling.
     });
 });
 
+
+// AJAX call to retrieve JSON data
 function getData(dataPath) {
     console.log('Reached getData() with a path of ' + dataPath);
     return $.get(dataPath, function(data) {
         console.log('got some data! Here it is...');
         console.log(JSON.stringify(data));
-        // return data;
     });
 }
 
-function loadDifferenceData() {
-    $('.differences').addClass('loading').removeClass('hide');
-    loadDifferences();
-//    loadLeft();
-//    loadRight();
-}
-
+// Fired when the user clicks the Start Over button
 $('.js-startover').on('click', resetAll);
 
 function resetAll() {
@@ -106,6 +90,7 @@ function resetAll() {
     bird2Value = '';
 }
 
+// Loads the bird vs. bird images
 function displayIntro() {
     $battleTitle.html(bird1Name + ' vs. ' + bird2Name);
     $battleTitle.removeClass('hide');
@@ -114,30 +99,18 @@ function displayIntro() {
     $('.intro-images').removeClass('hide');
 }
 
-// $.get("data/species/FRGU.json", function(data) {
-//     window.FRGU = data;
-//     window.FRGU.photoCount = data.photos.length;
-//     window.FRGU.next = 0;
-//     console.log('got json');
+// $(".testphoto").click(function() {
+//     var which;
+//     if (Math.random() < 0.5) {
+//         which = FRGU;
+//     } else {
+//         which = LAGU;
+//     }
+//     var $img = $('.testphoto')[0];
+//     $($img).attr('src', which.photos[which.next]);
+//     which.next++;
+//     console.log('which.next is ' + which.next);
 // });
-// $.get("data/species/LAGU.json", function(data) {
-//     window.LAGU = data;
-//     window.LAGU.photoCount = data.photos.length;
-//     window.LAGU.next = 0;
-//     console.log('got json');
-// });
-$(".testphoto").click(function() {
-    var which;
-    if (Math.random() < 0.5) {
-        which = FRGU;
-    } else {
-        which = LAGU;
-    }
-    var $img = $('.testphoto')[0];
-    $($img).attr('src', which.photos[which.next]);
-    which.next++;
-    console.log('which.next is ' + which.next);
-});
 
 
 
