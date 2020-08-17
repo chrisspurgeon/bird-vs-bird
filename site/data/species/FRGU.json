@@ -1,29 +1,47 @@
 {
     "differences": {
+        "belly": {
+            "LAGU": {
+                "text": "The belly of an adult breeding Franklin's Gull is sometimes tinged with pink. That never happens with Laughing Gulls."
+            },
+            "general": {
+                "text":"GENERIC Franklin's Gull head text."
+            }
+        },
         "head": {
+            "LAGU": {
+                "text": "The white crescents above and below the eye are noticeably thicker than on a Laughing Gull."
+            },
+            "BOGU": {
+                "text": "The white crescents above and below the eye are noticeably thicker than on a Bonaparte's Gull."
+            },
             "general": {
                 "text":"GENERIC Franklin's Gull head text.",
                 "images":[]
             }
         },
         "bill": {
+            "LAGU": {
+                "text": "The Franklin's Gull has a red bill that is smaller and straighter than the Laughing Gull's bill."
+            },
+            "BOGU": {
+                "text": "The Franklin's Gull has a deep reddish bill. The Bonaparte's Gull bill is black and quite thin."
+            },
             "general": {
                 "text":"GENERIC Bill text for Franklin's Gull."
             }
         },
-        "distribution": {
+        "wings": {
             "LAGU": {
-                "text": "This specific text, comparing the Franklin's Gull vocalizations to those of the Laughing Gull."
+                "text": "Franklin's Gulls have black wing tips separated from the grey inner wing by extensive white. Laughing Gulls don't have white near the wingtips. When standing, no white visible on the tail."
             },
-            "general": {
-                "text":"Franklin's Gull distribution text.",
-                "images":[]
+            "BOGU": {
+                "text": "Franklin's Gulls have white underwings, with black spots on the tips.  Upperside gray with white band on back of wing, and next to black tips. Bonaparte's Gulls have a distinctive thin white triangle on upper-wings' outer primaries"
             }
         },
         "vocalizations": {
-            "general": {
-                "text":"Franklin's Gull vocalization",
-                "images": []
+            "LAGU": {
+                    "text": "Franklin gulls are usually silent, except in a colony. Laughing Gulls are quite (sometimes extremely) vocal."
             }
         }
     },

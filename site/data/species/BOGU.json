@@ -1,0 +1,48 @@
+{
+    "differences": {
+        "size": {
+            "LAGU": {
+                "text": "Bonaparte's Gulls are substantially smaller than Laughing Gulls."
+            },
+            "FRGU": {
+                "text": "Bonaparte's Gulls are substantially smaller than Franklin's Gulls."
+            }
+        },
+        "head": {
+            "FRGU": {
+                "text": "The eye rings on Bonaparte's Gulls are noticeably smaller than on Franklin's Gulls."
+            },
+            "LAGU": {
+                "text": "Laughing Gulls have more extensive black on the head than Bonaparte's Gulls."
+            }
+        },
+        "bill": {
+            "LAGU": {
+                "text": "Bonaparte's bills are nearly black and thin. Laughing Gulls have larger, reddish bills."
+            },
+            "FRGU": {
+                "text": "Bonaparte's bills are nearly black. Franklin's Gull bills are a deep red."
+            }
+        },
+        "wings": {
+            "LAGU": {
+                "text": "Bonaparte's Gulls have a distinctive thin white triangle on upper-wings' outer primaries. Laughing Gulls wings are medium gray with somewhat extensive black on the wing tips."
+            },
+            "FRGU": {
+                "text": "Bonaparte's Gulls have a distinctive thin white triangle on upper-wings' outer primaries. Franklin's Gulls have black wing tips separated from the grey inner wing by extensive white."
+            }
+        },
+        "legs": {
+            "LAGU": {
+                "text": "Bonaparte's Gull legs are light pink. Laughing Gull legs are dark reddish-black."
+            },
+            "FRGU": {
+                "text": "Bonaparte's Gull legs are light pink. Franklin's Gull legs are reddish-black."
+            }
+        }
+    },
+    "quiz": {
+        "photos" : [
+        ]
+    }
+}

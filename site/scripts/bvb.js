@@ -143,7 +143,11 @@ function displayResults() {
                     output += bird1Data.differences[differenceData[i].key][bird2Value].text;
                 } else {
                     // There's nothing specific, so just output the generic difference text.
-                    output += bird1Data.differences[differenceData[i].key].general.text;
+                    if (typeof bird1Data.differences[differenceData[i].key].general !== 'undefined') {
+                        output += bird1Data.differences[differenceData[i].key].general.text;
+                    } else {
+                        output += '&nbsp;'
+                    }
                 }
             }
             output += '</td><td class="right">';
@@ -158,7 +162,11 @@ function displayResults() {
                     output += bird2Data.differences[differenceData[i].key][bird1Value].text;
                 } else {
                     // There's nothing specific, so just output the generic difference text.
-                    output += bird2Data.differences[differenceData[i].key].general.text;
+                    if (typeof bird2Data.differences[differenceData[i].key].general !== 'undefined') {
+                        output += bird2Data.differences[differenceData[i].key].general.text;
+                    } else {
+                        output += '&nbsp;'
+                    }
                 }
             }
             output += '</td></tr>';

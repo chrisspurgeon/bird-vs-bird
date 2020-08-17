@@ -1,24 +1,51 @@
 {
     "differences": {
-        "head": {
-            "general": {
-                "text":"GENERIC Laughing Gull head text.",
-                "images":[]
+        "size": {
+            "BOGU": {
+                "text": "Laughing Gulls are noticeably bigger than Bonaparte's Gulls."
             },
             "FRGU": {
-                "text": "Here is specific text, comparing the laughing gull's bill to that of the Franklin's gull."
+                "text": "Laughing Gulls are a little bit bigger than Franklin's Gulls."
             }
         },
-        "distribution": {
-            "general": {
-                "text":"GENERIC Laughing Gull distribution text.",
-                "images":[]
+        "head": {
+            "BOGU": {
+                "text": "On Laughing Gulls black head is more extensive than with Bonaparte's Gull."
+            },
+            "FRGU": {
+                "text": "On Laughing Gulls black head is more extensive than with Franklin's Gull. The white eye arcs are apparent on Laughing Gulls, but nowhere nearly as prominent as they are on Franklin's Gull."
+            }
+        },
+        "bill": {
+            "BOGU": {
+                "text": "Laughing Gulls have medium sized red bills. Bonaparte's Gulls have small, thin, black bills."
+            },
+            "FRGU": {
+                "text": "Laughing Gulls have larger bills than Franklin's Gulls. The gonys is apparent on Laughing Gulls, absent on Franklin's Gulls."
+            }
+        },
+        "wings": {
+            "BOGU": {
+                "text": "Laughing Gull wings are grey above with extensive black on the wingtips. They lack the Bonaparte's white triangle on the upper wings."
+            },
+            "FRGU": {
+                "text": "Darkish wings with black wingtips. There's no white areas near the wingtips, the way there is in a Franklin's Gull. When standing, the tail feathers are all black."
+            }
+        },
+        "legs": {
+            "BOGU": {
+                "text": "Laughing Gulls have dark reddish-black legs. Bonapart's Gulls have light pink legs."
+            },
+            "FRGU": {
+                "text": "The legs on Laughing Gulls are darker than on Franklin's Gulls, but the difference may not be reliable."
             }
         },
         "vocalizations": {
-            "general": {
-                "text":"",
-                "images": []
+            "FRGU": {
+                "text": "Laughing Gulls are quite vocal. Their long call sounds like an honest-to-goodness laugh. Franklin Gulls are noisy in a colony, but quiet when solo or in small groups."
+            },
+            "BOGU": {
+                "text": "Laughing Gulls are quite vocal. Their long call sounds like an honest-to-goodness laugh."
             }
         }
     },

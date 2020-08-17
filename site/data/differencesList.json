@@ -1,4 +1,5 @@
 [
+    {"key": "size", "title": "Size"},
     {"key": "head", "title": "Head"},
     {"key": "bill", "title": "Bill"},
     {"key": "crown", "title": "Crown"},
@@ -8,9 +9,9 @@
     {"key": "flanks", "title": "Flanks"},
     {"key": "belly", "title": "Belly"},
     {"key": "vent", "title": "Vent"},
+    {"key": "wings", "title": "Wings"},
     {"key": "legs", "title": "Legs"},
     {"key": "feet", "title": "Feet"},
-    {"key": "wings", "title": "Wings"},
     {"key": "primaries", "title": "Primaries"},
     {"key": "secondaries", "title": "Secondaries"},
     {"key": "tail", "title": "Tail"},
