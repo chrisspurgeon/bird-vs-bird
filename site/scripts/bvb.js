@@ -8,9 +8,11 @@ var $battleTitle = $('.battleTitle');
 var $leftIntroImage = $('.intro-image-left');
 var $rightIntroImage = $('.intro-image-right');
 var $differencesDiv = $('.differences');
+var $differencesTable = $('.differences-table');
 var $loadingMessageDiv = $('.loading-message');
 var loadingMessage = 'Loading data...';
 var errorMessage = 'Something went wrong! Please start over. :-(';
+var differencesHeadline = 'Key differences between BIRD1 and BIRD2...'
 var differenceData;
 var bird1Data;
 var bird2Data;
@@ -116,14 +118,33 @@ function displayIntro() {
 
 // Load all of the difference data onto the page.
 function displayResults() {
+    $('.difference-headline').html(differencesHeadline.replace('BIRD1',bird1Name).replace('BIRD2',bird2Name));
+    var output = '';
     for (var i = 0; i < differenceData.length; i++) {
         console.log("Checking " + differenceData[i].key);
-        if (typeof bird1Data[differenceData[i].key] === 'undefined') {
-            console.log('\tBird one has nothing for ' + differenceData[i].key);
+        if (typeof bird1Data[differenceData[i].key] !== 'undefined' || typeof bird2Data[differenceData[i].key] !== 'undefined') {
+            output += '<tr><th colspan=2 class="trait-headline">' + differenceData[i].title + '</th></tr>';
+            output += '<tr><td class="left">';
+            if (typeof bird1Data[differenceData[i].key] === 'undefined') {
+                output += '&nbsp;';
+            } else {
+                output += bird1Data[differenceData[i].key]['text'];
+            }
+            output += '</td><td class="right">';
+            if (typeof bird2Data[differenceData[i].key] === 'undefined') {
+                output += '&nbsp;';
+            } else {
+                output += bird2Data[differenceData[i].key]['text'];
+            }
+            output += '</td></tr>';
         } else {
-            console.log('\tBird one has info for ' + differenceData[i].key + '. Here is the text...');
-            console.log('\t' + bird1Data[differenceData[i].key]['text']);
+            console.log('\tThere is no data for ' + differenceData[i].key);
         }
+    }
+    if (output !== '') {
+        output = '<table cellpadding=0 cellspacing=0><tr><th class="table-bird-name left">' + bird1Name + '</th><th class="table-bird-name right">' + bird2Name + '</th></tr>' + output + '</table>';
+        $differencesTable.html(output);
+        $differencesDiv.removeClass('loading');
     }
 }
 
