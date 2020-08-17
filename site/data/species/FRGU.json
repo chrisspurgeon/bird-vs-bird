@@ -1,14 +1,28 @@
 {
-    "bill": {
-        "text":"Bill text for Franklin's Gull."
-    },
-    "distribution": {
-        "text":"Franklin's Gull distribution text.",
-        "images":[]
-    },
-    "vocalizations": {
-        "text":"Franklin's Gull vocalization",
-        "images": []
+    "differences": {
+        "head": {
+            "general": {
+                "text":"GENERIC Franklin's Gull head text.",
+                "images":[]
+            }
+        },
+        "bill": {
+            "general": {
+                "text":"GENERIC Bill text for Franklin's Gull."
+            }
+        },
+        "distribution": {
+            "general": {
+                "text":"Franklin's Gull distribution text.",
+                "images":[]
+            }
+        },
+        "vocalizations": {
+            "general": {
+                "text":"Franklin's Gull vocalization",
+                "images": []
+            }
+        }
     },
     "quiz": {
         "photos" : [

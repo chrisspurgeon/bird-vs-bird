@@ -1,11 +1,23 @@
 {
-    "distribution": {
-        "text":"Laughing Gull distribution text.",
-        "images":[]
-    },
-    "vocalizations": {
-        "text":"",
-        "images": []
+    "differences": {
+        "head": {
+            "general": {
+                "text":"GENERIC Laughing Gull head text.",
+                "images":[]
+            }
+        },
+        "distribution": {
+            "general": {
+                "text":"GENERIC Laughing Gull distribution text.",
+                "images":[]
+            }
+        },
+        "vocalizations": {
+            "general": {
+                "text":"",
+                "images": []
+            }
+        }
     },
     "quiz": {
         "photos" : [

@@ -122,19 +122,19 @@ function displayResults() {
     var output = '';
     for (var i = 0; i < differenceData.length; i++) {
         console.log("Checking " + differenceData[i].key);
-        if (typeof bird1Data[differenceData[i].key] !== 'undefined' || typeof bird2Data[differenceData[i].key] !== 'undefined') {
+        if (typeof bird1Data.differences[differenceData[i].key] !== 'undefined' || typeof bird2Data.differences[differenceData[i].key] !== 'undefined') {
             output += '<tr><th colspan=2 class="trait-headline">' + differenceData[i].title + '</th></tr>';
             output += '<tr><td class="left">';
-            if (typeof bird1Data[differenceData[i].key] === 'undefined') {
+            if (typeof bird1Data.differences[differenceData[i].key] === 'undefined') {
                 output += '&nbsp;';
             } else {
-                output += bird1Data[differenceData[i].key]['text'];
+                output += bird1Data.differences[differenceData[i].key].general.text;
             }
             output += '</td><td class="right">';
-            if (typeof bird2Data[differenceData[i].key] === 'undefined') {
+            if (typeof bird2Data.differences[differenceData[i].key] === 'undefined') {
                 output += '&nbsp;';
             } else {
-                output += bird2Data[differenceData[i].key]['text'];
+                output += bird2Data.differences[differenceData[i].key].general.text;
             }
             output += '</td></tr>';
         } else {
