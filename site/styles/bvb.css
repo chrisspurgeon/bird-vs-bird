@@ -103,25 +103,28 @@ select {
     width: 100%;
     border: 7px black;
     border-style: ridge;
+    margin-bottom: 50px;
 }
 .differences-table tr {
 
 }
 .differences-table th {
     padding: 10px;
-    font-size: 20px;
+    font-size: 23px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 .differences-table th.trait-headline {
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
     padding-top: 30px;
     border-bottom: 1px solid black;
 }
 .differences-table td {
     padding: 15px;
     border: 1px solid black;
+    width: 50%;
+    vertical-align: top;
 }
 .differences-table th.table-bird-name {
     border-bottom: 1px solid black;
