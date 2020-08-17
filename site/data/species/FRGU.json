@@ -12,6 +12,9 @@
             }
         },
         "distribution": {
+            "LAGU": {
+                "text": "This specific text, comparing the Franklin's Gull vocalizations to those of the Laughing Gull."
+            },
             "general": {
                 "text":"Franklin's Gull distribution text.",
                 "images":[]

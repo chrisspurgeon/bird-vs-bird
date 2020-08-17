@@ -122,19 +122,44 @@ function displayResults() {
     var output = '';
     for (var i = 0; i < differenceData.length; i++) {
         console.log("Checking " + differenceData[i].key);
+
+
+
+// TODO: TURN THIS INTO A FUNCTION!
+
+        // First, do we even have entries for this difference?
         if (typeof bird1Data.differences[differenceData[i].key] !== 'undefined' || typeof bird2Data.differences[differenceData[i].key] !== 'undefined') {
+            // We do, so output the difference title.
             output += '<tr><th colspan=2 class="trait-headline">' + differenceData[i].title + '</th></tr>';
             output += '<tr><td class="left">';
+
+            // BIRD 1
             if (typeof bird1Data.differences[differenceData[i].key] === 'undefined') {
+                // This bird doesn't have any info for this difference.
                 output += '&nbsp;';
             } else {
-                output += bird1Data.differences[differenceData[i].key].general.text;
+                // This bird does have data for this difference. First, let's see if it has species-specific info. If it does, use that.
+                if (typeof bird1Data.differences[differenceData[i].key][bird2Value] !== 'undefined') {
+                    output += bird1Data.differences[differenceData[i].key][bird2Value].text;
+                } else {
+                    // There's nothing specific, so just output the generic difference text.
+                    output += bird1Data.differences[differenceData[i].key].general.text;
+                }
             }
             output += '</td><td class="right">';
+
+            // BIRD 2
             if (typeof bird2Data.differences[differenceData[i].key] === 'undefined') {
+                // This bird doesn't have any info for this difference.
                 output += '&nbsp;';
             } else {
-                output += bird2Data.differences[differenceData[i].key].general.text;
+                // This bird does have data for this difference. First, let's see if it has species-specific info. If it does, use that.
+                if (typeof bird2Data.differences[differenceData[i].key][bird1Value] !== 'undefined') {
+                    output += bird2Data.differences[differenceData[i].key][bird1Value].text;
+                } else {
+                    // There's nothing specific, so just output the generic difference text.
+                    output += bird2Data.differences[differenceData[i].key].general.text;
+                }
             }
             output += '</td></tr>';
         } else {

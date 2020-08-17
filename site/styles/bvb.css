@@ -126,6 +126,12 @@ select {
     width: 50%;
     vertical-align: top;
 }
+.differences-table td.left {
+    border-left: none;
+}
+.differences-table td.right {
+    border-right: none;
+}
 .differences-table th.table-bird-name {
     border-bottom: 1px solid black;
 }

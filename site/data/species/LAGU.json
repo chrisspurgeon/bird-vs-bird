@@ -4,6 +4,9 @@
             "general": {
                 "text":"GENERIC Laughing Gull head text.",
                 "images":[]
+            },
+            "FRGU": {
+                "text": "Here is specific text, comparing the laughing gull's bill to that of the Franklin's gull."
             }
         },
         "distribution": {
