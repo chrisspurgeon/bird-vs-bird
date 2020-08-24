@@ -13,9 +13,13 @@ var $loadingMessageDiv = $('.loading-message');
 var loadingMessage = 'Loading data...';
 var errorMessage = 'Something went wrong! Please start over. :-(';
 var differencesHeadline = 'Key differences between BIRD1 and BIRD2...'
+var quizintrotext = "You'll be shown a series of pictures. For each one, decide if it's a "
 var differenceData;
 var bird1Data;
 var bird2Data;
+var quizPhotoArray = [];
+var quizSlideCount;
+var currentQuizSlide = 0;
 
 
 // Fired when the user picks the first bird.
@@ -183,8 +187,39 @@ function displayResults() {
 
 
 
+$('.quiz-button').on('click', function() {
+    $('.modal-wrapper').removeClass('hide');
+    $('.quiz-intro-text').html(quizintrotext + bird1Name + ' or a ' + bird2Name + '.<br>Ready?');
+    loadQuizPhotos();
+});
+
+$('.modal-close').on('click', function() {
+    $('.modal-wrapper').addClass('hide');
+});
 
 
+function loadQuizPhotos() {
+    for (var i = 0; i < bird1Data.quiz.photos.length; i++) {
+        quizPhotoArray.push(bird1Data.quiz.photos[i]);
+    }
+    for (i = 0; i < bird2Data.quiz.photos.length; i++) {
+        quizPhotoArray.push(bird2Data.quiz.photos[i]);
+    }
+    console.log(quizPhotoArray);
+    shuffle(quizPhotoArray);
+    console.log(quizPhotoArray);
+    quizSlideCount = quizPhotoArray.length;
+    loadNextQuizImage();
+}
+
+function loadNextQuizImage() {
+    $('.quizImage').attr("src", quizPhotoArray[currentQuizSlide]);
+    currentQuizSlide++;
+}
+
+$('.quizImage').on('click', function() {
+    loadNextQuizImage();
+});
 
 // $(".testphoto").click(function() {
 //     var which;
@@ -198,6 +233,15 @@ function displayResults() {
 //     which.next++;
 //     console.log('which.next is ' + which.next);
 // });
+
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
 
 
 

@@ -143,6 +143,35 @@ select {
     text-align: right;
     border-left: 1px solid black;
 }
+.quiz-button {
+    text-align: center;
+}
+
+.modal-wrapper {
+    background-color: black;
+    position: fixed;
+    width: 96vw;
+    height: 96vh;
+    top: 2vh;
+    left: 2vw;
+    z-index: 10;
+}
+
+
+.modal-close {
+    color: darkgray;
+    font-size: 24px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.modal-close:hover {
+    color: white;
+    cursor: pointer;
+}
+.quiz-intro-text {
+    text-align: center;
+}
 
 .hide {
     display: none;
