@@ -1,0 +1,28 @@
+{
+    "differences": {
+        "size": {
+            "LOSH": {
+                "text": "Northern Shrikes are a bit bigger than Loggerhead Shrikes."
+            }
+        },
+        "body": {
+            "LOSH": {
+                "text": "Northern Shrikes often have fine grayish brown horizontal barring on the breast. Loggerhead Shrike breasts are pure white or only very faintly barred. NOTE: The Northern Shrike's barring becomes fainter as the feathers wear. In the spring it can be quite faint."
+            }
+        },
+        "head": {
+            "LOSH": {
+                "text": "The black mask on the Northern Shrike is thinner than on the Loggerhead Shrike."
+            }
+        },
+        "bill": {
+            "LOSH": {
+                "text": "Northern's bills can be bigger, and the hook a bit larger, than with Loggerheads."
+            }
+        }
+    },
+    "quiz": {
+        "photos" : [
+        ]
+    }
+}

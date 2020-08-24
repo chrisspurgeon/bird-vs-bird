@@ -1,0 +1,28 @@
+{
+    "differences": {
+        "size": {
+            "NSHR": {
+                "text": "Loggerhead Shrikes are a bit smaller than Northern Shrikes."
+            }
+        },
+        "body": {
+            "NSHR": {
+                "text": "The Loggerhead Shrike's breast is pure white, or only very faintly barred. If the barring is at all apparent it's a Northern Shrike."
+            }
+        },
+        "head": {
+            "NSHR": {
+                "text": "The black mask on the Loggerhead Shrike is thicker and more extensive than it is with Northern Shrikes. The mask wraps across the top of the bill."
+            }
+        },
+        "bill": {
+            "NSHR": {
+                "text": "Loggerheads often have a stubbier bill with a smaller hook than Northerns."
+            }
+        }
+    },
+    "quiz": {
+        "photos" : [
+        ]
+    }
+}
