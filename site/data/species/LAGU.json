@@ -51,21 +51,16 @@
     },
     "quiz": {
         "photos" : [
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/96119881/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/93402691/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/93275881/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/251780471/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/249681271/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/249196231/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/237578921/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/231475931/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/228240711/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/219811651/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/218235661/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/214535501/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/190261711/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/172109191/640",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/172643721/640"
+            "https://live.staticflickr.com/7365/27074303250_b237f7d584_k.jpg",
+            "https://live.staticflickr.com/7555/27232310864_9c8f644360_h.jpg",
+            "https://live.staticflickr.com/2814/34158399175_b601ed2b9d_h.jpg",
+            "https://live.staticflickr.com/3684/33270398781_ed8f824119_h.jpg",
+            "https://live.staticflickr.com/2939/13498349884_cfe61c3067_h.jpg",
+            "https://live.staticflickr.com/6181/6063793716_7263144796_h.jpg",
+            "https://live.staticflickr.com/1349/4607437545_8ef3102936_h.jpg",
+            "https://live.staticflickr.com/1661/25878577983_105e2dde97_h.jpg",
+            "https://live.staticflickr.com/5316/6915407360_d3f78a2101_h.jpg",
+            "https://live.staticflickr.com/7261/7069142463_35207519e3_b.jpg"
         ]
     }
 }

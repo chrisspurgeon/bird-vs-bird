@@ -43,21 +43,16 @@
     },
     "quiz": {
         "photos" : [
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/239989621/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/224593571/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/224592741/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/174594031/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/174345191/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/172129331/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/166712241/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/161124631/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/155630061/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/153954541/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/152371991/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/147029181/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/147029151/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/253355301/640?id=BOGU",
-            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/247819231/640?id=BOGU"
+            "https://live.staticflickr.com/3860/14654062371_a25ab7518c_h.jpg",
+            "https://live.staticflickr.com/65535/47729689902_3f80786a03_h.jpg",
+            "https://live.staticflickr.com/825/41224545094_174d0e9528_h.jpg",
+            "https://live.staticflickr.com/935/42897347915_ee1ac3c229_h.jpg",
+            "https://live.staticflickr.com/1815/43084334904_2a449d6c81_k.jpg",
+            "https://live.staticflickr.com/2925/14191260923_656c99c693_h.jpg",
+            "https://live.staticflickr.com/6126/6019762360_8c70d6152b_b.jpg",
+            "https://live.staticflickr.com/318/18974803716_5a00c4bbcd_h.jpg",
+            "https://live.staticflickr.com/8733/16916212783_d537f58616_c.jpg",
+            "https://live.staticflickr.com/4473/37970934686_90c1512436_h.jpg"
         ]
     }
 }
