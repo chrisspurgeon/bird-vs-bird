@@ -23,16 +23,16 @@
     },
     "quiz": {
         "photos" : [
-            "https://live.staticflickr.com/3707/19094000080_e3bd61bb70_z.jpg",
-            "https://live.staticflickr.com/4903/46185227121_6c84796ec6_h.jpg",
-            "https://live.staticflickr.com/7211/26759926026_6152725427_h.jpg",
-            "https://live.staticflickr.com/7318/27302253412_65a555fea8_h.jpg",
-            "https://live.staticflickr.com/3050/2997349045_92c8201bd9.jpg",
-            "https://live.staticflickr.com/4741/26156871548_7f3222e54f_h.jpg",
-            "https://live.staticflickr.com/4250/35005395565_0577755992_c.jpg",
-            "https://live.staticflickr.com/8089/8375501038_ad948a7420_h.jpg",
-            "https://live.staticflickr.com/8146/7606475200_bf10163abf_h.jpg",
-            "https://live.staticflickr.com/3177/2320577127_31a27aed80_h.jpg"
+            "https://live.staticflickr.com/3707/19094000080_e3bd61bb70_z.jpg?id=LOSH",
+            "https://live.staticflickr.com/4903/46185227121_6c84796ec6_h.jpg?id=LOSH",
+            "https://live.staticflickr.com/7211/26759926026_6152725427_h.jpg?id=LOSH",
+            "https://live.staticflickr.com/7318/27302253412_65a555fea8_h.jpg?id=LOSH",
+            "https://live.staticflickr.com/3050/2997349045_92c8201bd9.jpg?id=LOSH",
+            "https://live.staticflickr.com/4741/26156871548_7f3222e54f_h.jpg?id=LOSH",
+            "https://live.staticflickr.com/4250/35005395565_0577755992_c.jpg?id=LOSH",
+            "https://live.staticflickr.com/8089/8375501038_ad948a7420_h.jpg?id=LOSH",
+            "https://live.staticflickr.com/8146/7606475200_bf10163abf_h.jpg?id=LOSH",
+            "https://live.staticflickr.com/3177/2320577127_31a27aed80_h.jpg?id=LOSH"
         ]
     }
 }
