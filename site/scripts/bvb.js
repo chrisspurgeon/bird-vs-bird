@@ -182,6 +182,7 @@ function displayResults() {
         output = '<table cellpadding=0 cellspacing=0><tr><th class="table-bird-name left">' + bird1Name + '</th><th class="table-bird-name right">' + bird2Name + '</th></tr>' + output + '</table>';
         $differencesTable.html(output);
         $differencesDiv.removeClass('loading');
+        $('.quiz-button').removeClass('hide');
     }
 }
 

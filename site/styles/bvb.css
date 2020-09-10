@@ -173,6 +173,23 @@ select {
     text-align: center;
 }
 
+.quiz-image-wrapper {
+    width: 45%;
+    padding-left: 5%;
+    position: relative;
+}
+.quiz-image-wrapper img {
+    width: 100%;
+}
+
+.quiz-button-wrapper {
+    width: 50%;
+    background-color: orange;
+    margin-left: 55%;
+}
+
+
+
 .hide {
     display: none;
 }
