@@ -36,16 +36,7 @@ h3 span {
     margin-top: 120px;
     font-size: 230%;
 }
-.startover {
-    cursor: pointer;
-    transition: .3s all;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.startover:hover {
-    color: red;
-    background-color: lightgray;
-    border-color: red;
-}
+
 form {
     margin-bottom: 0;
 }
@@ -145,6 +136,16 @@ select {
 }
 .quiz-button {
     text-align: center;
+}
+.quiz-button span {
+    cursor: pointer;
+    transition: .3s all;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.quiz-button span:hover {
+    color: red;
+    background-color: lightgray;
+    border-color: red;
 }
 
 .modal-wrapper {

@@ -29,7 +29,7 @@ $("#bird1").on("change", function() {
     bird1Name = $("#bird1 option:selected").text();
     console.log("change 1 triggered with a value of " + bird1Value + ', which has a category of ' + bird1Category);
     $("#bird1").addClass("hide");
-    $('.js-startover').removeClass('hide');
+    $('.start-over-button').removeClass('hide');
 
     // Now that we've picked the first bird, make the second bird select element contain only related birds.
     var bird2Options = $("#bird2 option");
@@ -101,7 +101,8 @@ function resetAll() {
     $('#bird2 option').removeClass('hide');
     $('#bird1').val('');
     $('#bird1').removeClass('hide');
-    $('.js-startover').addClass('hide');
+    $('.start-over-button').addClass('hide');
+    $('.take-the-quiz-button').addClass('hide');
     $('.intro-images').addClass('hide');
     $battleTitle.addClass('hide');
     $('.differences').addClass('hide').removeClass('loading');
@@ -188,7 +189,7 @@ function displayResults() {
 
 
 
-$('.quiz-button').on('click', function() {
+$('.js-quiz').on('click', function() {
     $('.modal-wrapper').removeClass('hide');
     $('.quiz-intro-text').html(quizintrotext + bird1Name + ' or a ' + bird2Name + '.<br>Ready?');
     loadQuizPhotos();
