@@ -58,7 +58,7 @@ $("#bird2").on("change", function() {
     $differencesDiv.addClass('loading').removeClass('hide');
     $loadingMessageDiv.html(loadingMessage).removeClass('error-message').addClass('loading-message');
     // Retrieve the differences list, and the data for the two birds.
-    $.when(getData('/data/differencesList.json'), getData('data/species/' + bird1Value + '.json'), getData('data/species/' + bird2Value + '.json'))
+    $.when(getData('data/differencesList.json'), getData('data/species/' + bird1Value + '.json'), getData('data/species/' + bird2Value + '.json'))
     .done(function(differenceDataResult, leftBirdDataResult, rightBirdDataResult) {
         console.log('got ALL the data!');
         console.log('Difference data is...');
